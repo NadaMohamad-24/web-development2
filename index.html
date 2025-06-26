@@ -1,1 +1,153 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: url('https://source.unsplash.com/1600x500/?travel') no-repeat center/cover;
+      color: white;
+    }
+
+    .hero input, .hero button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .hero button {
+      background-color: #0066aa;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #004f88;
+    }
+
+    .featured {
+      padding: 30px;
+      text-align: center;
+      background: white;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      width: 300px;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Travel Explorer</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Destinations</a>
+    <a href="#">Plan</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Discover Your Next Adventure</h2>
+  <p>Find the best destinations and plan your perfect trip!</p>
+  <input type="text" id="search" placeholder="Search destinations...">
+  <button onclick="searchDestinations()">Search</button>
+</section>
+
+<section class="featured" id="featured">
+  <h3>Popular Destinations</h3>
+  <div class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?paris" alt="Paris">
+      <h4>Paris</h4>
+      <p>City of lights and love.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?maldives" alt="Maldives">
+      <h4>Maldives</h4>
+      <p>White sands and clear waters.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?tokyo" alt="Tokyo">
+      <h4>Tokyo</h4>
+      <p>Experience modern meets tradition.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
+</footer>
+
+<script>
+  function searchDestinations() {
+    const query = document.getElementById("search").value.toLowerCase();
+    if (!query) {
+      alert("Please enter a destination to search.");
+    } else {
+      alert("Searching for: " + query + " (this can be expanded with backend later).");
+    }
+  }
+</script>
+
+</body>
+</html>
